@@ -1,0 +1,33 @@
+# Codewise pre-commit hooks
+# Add to your .pre-commit-config.yaml:
+#
+# repos:
+#   - repo: https://github.com/naveenkumarbaskaran/codewise
+#     rev: v0.1.0
+#     hooks:
+#       - id: codewise-review
+#       - id: codewise-security
+
+- id: codewise-review
+  name: Codewise Code Review
+  entry: codewise review --staged --hook-mode
+  language: python
+  types: [file]
+  stages: [commit]
+  additional_dependencies: ["codewise-ai"]
+
+- id: codewise-security
+  name: Codewise Security Scan
+  entry: codewise security --staged --hook-mode
+  language: python
+  types: [file]
+  stages: [commit]
+  additional_dependencies: ["codewise-ai"]
+
+- id: codewise-rules
+  name: Codewise Rule Check (regex only, no LLM)
+  entry: codewise review --staged --hook-mode
+  language: python
+  types: [file]
+  stages: [commit]
+  additional_dependencies: ["codewise-ai"]
