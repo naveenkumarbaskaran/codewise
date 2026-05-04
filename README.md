@@ -8,6 +8,16 @@
 
 Works with **any LLM provider**: OpenAI, Anthropic, Google Gemini, Ollama, Azure OpenAI, AWS Bedrock — powered by [litellm](https://github.com/BerriAI/litellm).
 
+## 🎬 Demo
+
+<p align="center">
+  <img src="assets/demo.gif" alt="codewise demo — code review, security scan, test generation" width="700">
+  <br>
+  <em>codewise reviewing code, scanning for vulnerabilities, and generating tests — all from the CLI</em>
+</p>
+
+---
+
 ## Features
 
 | Capability | Description |
